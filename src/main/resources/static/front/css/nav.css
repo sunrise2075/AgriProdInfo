@@ -1,0 +1,77 @@
+/* 在顶部导航栏中添加黑色背景颜色 */
+.nav-container-header {
+    /*overflow: hidden;*/
+    background-color: #eaebeb;
+    width: 100%;
+    height: 90px;
+}
+
+.nav-container {
+    /*overflow: hidden;*/
+    background-color: #c35133;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo {
+    float: left;
+    color: #c35133;
+    line-height: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 70px;
+}
+
+.logo-img {
+    width: 50px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.header-img {
+    height: 90px;
+    width: 100%;
+}
+
+.nav-item-box {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.nav-item {
+    float: left;
+    line-height: 40px;
+    margin: 0 15px;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f8dbd8;
+}
+
+.nav-right {
+    width: 10%;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f8dbd8;
+}
+
+.nav-item:hover {
+    /*border-bottom: 4px solid #9098a7;*/
+    color: blue;
+    /*transition: all 0.2s;*/
+}
+
+.active {
+    color: blue;
+}
+a.active {
+    color: blue;
+}
