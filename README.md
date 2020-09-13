@@ -32,11 +32,7 @@
  ![应用程序数据库配置连接](./WechatIMG325.png)
  
  ## 切换数据库并导入数据库脚本
- 
- 使用数据库
- 
-    use argi_info;
     
- 然后运行`demo.sql`
+ 运行`demo.sql`
  
  
