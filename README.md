@@ -25,13 +25,13 @@
 
 创建应用程序数据库
 
-    DROP DATABASE `argi_info`;
+    DROP DATABASE `argi`;
     
-    CREATE DATABASE  `argi_info` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+    CREATE DATABASE  `argi` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
     
     CREATE USER 'argiroot'@'localhost' IDENTIFIED BY  '123456';
     
-    GRANT ALL PRIVILEGES ON  `argi_info` . * TO  'argiroot'@'localhost';
+    GRANT ALL PRIVILEGES ON  `argi` . * TO  'argiroot'@'localhost';
     
     flush privileges;
     
@@ -45,7 +45,7 @@
  
  ### 切换数据库并导入数据库脚本
     
- 最新版的IDEA里面可以创建数据库连接，配置好数据源以后，直接在编辑器中打开`demo.sql`、选择数据源并运行，如果有问题，请参考IDEA使用指导文档
+ 最新版的IDEA里面可以创建数据库连接，配置好数据源以后，直接在编辑器中打开`argi_db.sql`、选择数据源并运行，如果有问题，请参考IDEA使用指导文档
  
  ## 导入项目
  
