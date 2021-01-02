@@ -2,3 +2,12 @@
 AgriProdInfo.iml
 target/
 log/
+.DS_Store
+src/.DS_Store
+src/main/.DS_Store
+src/main/resources/.DS_Store
+src/main/resources/static/.DS_Store
+src/main/resources/static/front/.DS_Store
+src/main/resources/static/front/img/.DS_Store
+src/main/resources/static/front/img/carousel/.DS_Store
+
