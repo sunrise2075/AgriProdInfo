@@ -15,11 +15,21 @@
         #notice-box li {
             margin-bottom: 10px;
         }
+
         #view-notice-body img {
             width: 400px;
         }
+
         #view-notice-body iframe {
             width: 400px;
+        }
+
+        .nav-item:active {
+            color: #bf161c;
+        }
+
+        .nav-item:hover:hover {
+            color: #bf161c;
         }
     </style>
 </head>
@@ -39,11 +49,11 @@
     <ul class="nav-item-box">
         <li><a class="nav-item" href="index.html">首页</a></li>
         <li><a class="nav-item active" href="advertiserInfo.html">公告信息</a></li>
-			<li><a class="nav-item" href="agriTechInfo.html">农事指导信息</a></li>
-			<li><a class="nav-item" href="argiPolicyInfo.html">政策扶持专题信息</a></li>
-			<li><a class="nav-item" href="argiProductInfo.html">农产品信息</a></li>
+        <li><a class="nav-item" href="agriTechInfo.html">农事指导信息</a></li>
+        <li><a class="nav-item" href="argiPolicyInfo.html">政策扶持专题信息</a></li>
+        <li><a class="nav-item" href="argiProductInfo.html">农产品信息</a></li>
 
-<!--        <li><a class="nav-item" href="/end/page/index.html" target="_blank">进入后台系统</a></li>-->
+        <!--        <li><a class="nav-item" href="/end/page/index.html" target="_blank">进入后台系统</a></li>-->
     </ul>
     <div class="nav-right">
         <a class="nav-item" href="/end/page/login.html" target="_blank">登录</a>
@@ -88,14 +98,14 @@
             if (res.code === '0') {
                 let itemList = res.data.list;
                 let id = getQueryVariable('id');
-                if(!id) {
+                if (!id) {
                     id = res.data.list[0].id;
                 }
                 let $box = $("#notice-item-box");
                 $box.empty();
                 for (let item of itemList) {
                     let $item = $(`<li><a href="advertiserInfo.html?id=${item.id}">${item.name}</a></li>`);
-                    if(parseInt(id) === item.id) {  // 当前选择的公告
+                    if (parseInt(id) === item.id) {  // 当前选择的公告
                         $item.find('a').addClass('active');
                         // 当前展示的公告信息
                         $('#view-notice-title').text(item.name);
