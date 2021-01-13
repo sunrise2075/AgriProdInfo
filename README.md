@@ -56,5 +56,7 @@
  ## 打开首页
  
  [本地首页](http://localhost:8888/front/index.html)
+
+ [后台首页](http://localhost:8888/end/page/index.html)
  
  

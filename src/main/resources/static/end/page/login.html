@@ -12,13 +12,37 @@
         [v-cloak] {
             display: none;
         }
+        body {
+            background: url("../img/login-bg.png") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #app > div.row.text-center > div > h1 {
+            font-family:LiSu,STLiti,"Microsoft YaHei",
+            微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu,sans-serif;
+            color: #e60000;
+        }
+
+        #app > div:nth-child(2) > div > div > form > div:nth-child(8) > a {
+            color: #e60000;
+            background-color: #7bb12f;
+            border-color: #5daf34;
+        }
+
+        #app > div:nth-child(2) > div > div > form > div:nth-child(10) > a {
+            color: #fcf8e3;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body style="background-color: #E2E2E2;">
 <div id="app" class="container" v-cloak>
     <div class="row text-center " style="padding-top:100px;">
         <div class="col-md-12">
-           <h2>欢迎登陆后台管理系统</h2>
+           <h1>欢迎登陆后台管理系统</h1>
         </div>
     </div>
     <div class="row ">
