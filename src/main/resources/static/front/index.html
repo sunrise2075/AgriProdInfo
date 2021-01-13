@@ -41,11 +41,11 @@
         <ul class="nav-item-box">
             <li><a class="nav-item active" href="index.html">首页</a></li>
             <li><a class="nav-item" href="advertiserInfo.html">公告信息</a></li>
-			<li><a class="nav-item" href="agriTechInfo.html">农事指导信息</a></li>
-			<li><a class="nav-item" href="argiPolicyInfo.html">政策扶持专题信息</a></li>
-			<li><a class="nav-item" href="argiProductInfo.html">农产品信息</a></li>
+            <li><a class="nav-item" href="agriTechInfo.html">农事指导信息</a></li>
+            <li><a class="nav-item" href="argiPolicyInfo.html">政策扶持专题信息</a></li>
+            <li><a class="nav-item" href="argiProductInfo.html">农产品信息</a></li>
 
-<!--            <li><a class="nav-item" href="/end/page/index.html" target="_blank">进入后台系统</a></li>-->
+            <!--            <li><a class="nav-item" href="/end/page/index.html" target="_blank">进入后台系统</a></li>-->
         </ul>
         <div class="nav-right">
             <a class="nav-item" href="/end/page/login.html" target="_blank">登录</a>
@@ -53,41 +53,64 @@
         </div>
     </div>
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img class="carousel-img" src="/front/img/carousel/1.jpg" alt=""></div>
-            <div class="swiper-slide"><img class="carousel-img" src="/front/img/carousel/2.jpg" alt=""></div>
-            <div class="swiper-slide"><img class="carousel-img" src="/front/img/carousel/3.jpg" alt=""></div>
-            <div class="swiper-slide"><img class="carousel-img" src="/front/img/carousel/4.jpg" alt=""></div>
-        </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-
-        <!-- 如果需要导航按钮 -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-    </div>
-
-    <div style="color: #c35133; font-size: 20px; font-weight: bold; margin: 30px; text-align: center">
-        系统公告
-        <hr>
-    </div>
-
     <div class="container">
-        <ul class="row notice-box">
-        </ul>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="carousel-img" src="/front/img/carousel/1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img class="carousel-img" src="/front/img/carousel/2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img class="carousel-img" src="/front/img/carousel/3.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img class="carousel-img" src="/front/img/carousel/4.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="container info">
+                    <div class="row">
+                        <table class="table table-striped notice-box">
+                            <thead>
+                            <tr>
+                                <th scope="col" style="width: 50px">#</th>
+                                <th scope="col">名称</th>
+                                <th scope="col">描述</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
 <!--js库文件-->
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/swiper-5.4.5/swiper.min.js"></script>
+<script src="js/vue2.6.11/axios.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.metisMenu.js"></script>
+<script src="js/vue2.6.11/axios.js"></script>
+<script src="js/vue2.6.11/vue.min.js"></script>
 
 
 <script>
     $(function () {
-
         var mySwiper = new Swiper('.swiper-container', {
             // direction: 'vertical', // 垂直切换选项
             autoplay: {
@@ -121,21 +144,21 @@
         })
 
         $.get('/advertiserInfo/page/all?pageSize=10', function (res) {
-            let $box = $('.notice-box');
+            let $box = $('.notice-box tbody');
             $box.empty();
             let n = 4;
             if (res.code === '0') {
                 let list = res.data.list;
                 for (let i = 1; i <= n; i++) {
                     let data = list[i - 1];
-                    let $item = $('<li class="col-md-3"><a href="advertiserInfo.html?id=' + data.id + '"><img src="/front/img/carousel/' + i + '.jpg">' + data.name + '</a></li>');
+                    let $item = $('<tr><th scope="row" style="width: 50px">' + i + '</th><td><a href="advertiserInfo.html?id=' + data.id + '">' + data.name + '</a></td><td>' + data.time + '</td></tr>');
                     $box.append($item);
                 }
             } else {
                 alert("后台服务异常")
             }
-        })
-    })
+        });
+    });
 </script>
 </body>
 </html>
