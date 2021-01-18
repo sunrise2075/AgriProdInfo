@@ -53,9 +53,9 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" style="width: 100%;">
         <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img class="carousel-img" src="/front/img/carousel/1.jpg" alt="">
@@ -81,7 +81,6 @@
                         <table class="table table-striped notice-box">
                             <thead>
                             <tr>
-                                <th scope="col" style="width: 50px">#</th>
                                 <th scope="col">名称</th>
                                 <th scope="col">描述</th>
                             </tr>
@@ -151,7 +150,7 @@
                 let list = res.data.list;
                 for (let i = 1; i <= n; i++) {
                     let data = list[i - 1];
-                    let $item = $('<tr><th scope="row" style="width: 50px">' + i + '</th><td><a href="advertiserInfo.html?id=' + data.id + '">' + data.name + '</a></td><td>' + data.time + '</td></tr>');
+                    let $item = $('<tr><td><a href="advertiserInfo.html?id=' + data.id + '">' + data.name + '</a></td><td>' + data.time + '</td></tr>');
                     $box.append($item);
                 }
             } else {
