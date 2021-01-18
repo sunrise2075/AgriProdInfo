@@ -395,9 +395,9 @@ p {
     line-height: 21px;
     padding-top: 4px;
 }
-
+/**/
 .active-menu {
-    background-color: #18A0A9 !important;
+    background-color: #483d8b !important;
     color: #fff !important;
 }
 
@@ -454,8 +454,9 @@ p {
     border-bottom: 1px solid rgba(107, 108, 109, 0.19);
 }
 
+/*#096E75*/
 ul.nav.nav-second-level.collapse.in {
-    background: #096E75;
+    background: #665bab;
 }
 
 .sidebar-collapse .nav > li > a:hover,
@@ -466,11 +467,11 @@ ul.nav.nav-second-level.collapse.in {
 
 .navbar-side {
     border: none;
-    background: cadetblue !important;
+    background: #483d8b !important;
 }
-
+/*cadetblue*/
 .top-navbar {
-    background: cadetblue;
+    background: #483d8b;
     border-bottom: none;
 }
 
